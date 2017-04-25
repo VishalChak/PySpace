@@ -1,3 +1,0 @@
-class evenBiggerSnake(veryBigSnake):
-	pass
-	
