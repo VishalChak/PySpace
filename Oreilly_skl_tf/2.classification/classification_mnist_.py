@@ -26,6 +26,11 @@ from sklearn.linear_model import SGDClassifier
 sgd_clf = SGDClassifier(random_state=42)
 sgd_clf.fit(X_train, y_train)
 
+ans = sgd_clf.predict(X_train[1])
+print(ans)
+np.set_printoptions(threshold=np.nan)
+print(y_train)
+
 
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.base import clone
@@ -47,6 +52,13 @@ for train_index, test_index in skfolds:
 from sklearn.cross_validation import cross_val_score
 
 score = cross_val_score(sgd_clf, X_train, y_train, cv=3, scoring="accuracy")
+
+'''import pandas as pd
+import numpy as np
+import cv2
+img = cv2.imread("five.jpg")'''
+
+
 
 from sklearn.base import BaseEstimator
 
